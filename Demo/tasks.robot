@@ -39,7 +39,7 @@ RunTask
 
 *** Keywords ***
 Open Link
-    Open Chrome Browser    ${url}    headless=True
+    Open Chrome Browser    ${url}
     Wait Until Element Is Visible    ${load_more}
     Maximize Browser Window
 
