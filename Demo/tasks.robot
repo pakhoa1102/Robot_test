@@ -20,9 +20,9 @@ ${phone_path}     xpath://*[@id="div_Danh_Sach_San_Pham"]/div[*]/a/h2
 ${price_path}     xpath://*[@id="div_Danh_Sach_San_Pham"]/div[*]/a/div[3]/span[1]
 ${load_more}      xpath://*[@id="div_Danh_Sach_San_Pham_loadMore_btn"]/a
 
-${url}            https://memoryzone.com.vn/ram
-${phone_path}     xpath://section/div/section/div[1]/div[*]/div/div[2]/h3[@class="product-name"]/a
-${load_more}      xpath://a[.='Trang cuối']
+# ${url}            https://memoryzone.com.vn/ram
+# ${phone_path}     xpath://section/div/section/div[1]/div[*]/div/div[2]/h3[@class="product-name"]/a
+# ${load_more}      xpath://a[.='Trang cuối']
 
 ${FILE_PATH}      ${CURDIR}${/}output.xlsx
 
@@ -39,7 +39,7 @@ RunTask
 
 *** Keywords ***
 Open Link
-    Open Chrome Browser    ${url}    headless=True
+    Open Chrome Browser    ${url}
     Wait Until Element Is Visible    ${load_more}
     Maximize Browser Window
 
