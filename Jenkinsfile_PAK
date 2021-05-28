@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'cd Demo'
+                sh 'cd Demo && ls -l'
                 sh 'rcc run'
             }
         }
