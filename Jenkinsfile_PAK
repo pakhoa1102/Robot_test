@@ -5,8 +5,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'rcc --help'
-                sh 'python --version'
+                sh 'cd Demo'
+                sh 'rcc run'
             }
         }
     }
