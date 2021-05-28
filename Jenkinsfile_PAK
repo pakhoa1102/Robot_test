@@ -1,10 +1,12 @@
 pipeline {
-    agent {label 'ATS'}
-
+    agent {
+        docker { image 'pakhoa/robot_ubuntu' }
+    }
     stages {
-        stage('Hello') {
+        stage('Test') {
             steps {
-                echo 'Hello World'
+                sh 'rcc --help'
+                sh 'python --version'
             }
         }
     }
