@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'rcc run -r Demo/robot.yaml'
+                sh 'rcc run -r Container/robot.yaml'
             }
         }
     }
