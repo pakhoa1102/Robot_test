@@ -19,7 +19,7 @@ pipeline {
     post {
         always {
             script {           
-                archiveArtifacts artifacts: '*.png', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'Container/*.png', allowEmptyArchive: true
             }
         }
     }
