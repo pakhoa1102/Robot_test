@@ -1,9 +1,15 @@
 pipeline {
     agent {
-        docker { image 'pakhoa/robot_ubuntu' }
+        label 'master'
     }
     stages {
         stage('Test') {
+            agent {
+                docker {
+                    image 'pakhoa/robot_ubuntu'
+                    reuseNode true
+                }
+            }
             steps {
                 sh '''
                 apt-get install -y curl unzip openjdk-8-jre-headless xvfb libxi6 libgconf-2-4 gnupg2
